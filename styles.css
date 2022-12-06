@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    position: relative;
+}
+
+.app{
+    background-color: rgb(251 251 251);
+    min-height: 100vh;
+}
+
+.app__header{
+    background-color: white;
+    padding-block: 1rem;
+    box-shadow: 0px 1px 5px rgb(178, 196, 190);
+    font-family: 'Italiana', serif;
+    
+}
+
+.headerWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.headerWrapper > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.75rem;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+.headerWrapper> button > i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.headerWrapper > h2{
+    color: #5e5e5e;
+    font-weight: 600;
+}
+
+.imagePicker{
+    border: 1px solid #c3c3c3;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    width: 85%;
+    max-width: 600px;
+    margin: 1rem auto;      
+}
+
+.imagePicker > span{
+    padding-block: 1rem;
+    color: rgb(107, 107, 107);
+    font-weight: 600;
+    font-family: 'Italiana', serif;
+}
+
+.imagePicker__btn{
+    padding: 0.5rem 1rem;
+    background-color: rgb(38 126 120);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.uploadedImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    max-width: 500px;
+    margin: 3rem auto; 
+    -webkit-mask-image: "none";
+    -webkit-mask-size: 90%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position-x: 50%;
+}
+
+.uploadedImage > img{
+    width: 100%;
+}
+
+.modalWindow{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(48, 48, 48);
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+}
+
+.modalWindow__header{
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    padding-block: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modalWindow__header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.modalWindow__header > button {
+    margin-left: 3rem;
+}
+
+.modalWindow button i{
+    font-size: 1.5rem;
+}
+
+.cropIcons > button {
+    margin-right: 2rem;
+}
+
+#cropBtn{
+    cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    max-width: 600px;
+    margin: 3rem auto;
+}
+
+.container > img{
+    display: block;
+    width: 100%;
+}
+
+.modalWindowFinal{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    background: rgba(0, 0, 0, 0.575);
+}
+
+.modalWindowFinal_container{
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+    min-height: 50vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modalWindowFinal_container > h2{
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    color: rgb(107, 107, 107);
+    font-weight: 600;
+    font-family: 'Italiana', serif;
+}
+
+.imgPreview{
+    -webkit-mask-image: none;
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position-y: 25%;
+}
+
+.imgPreview > img{
+    max-width: 100%;
+    display: block;
+    margin-top: 0.3rem;
+    max-height: 200px;
+}
+
+#crossBtn{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    border: none;
+    background: none;
+    color: #5e5e5e;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.filtersAvail{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 0.5rem;
+}
+
+#original{
+    width: 18%;
+    padding-block: 1rem;
+    color: #5e5e5e;
+    font-weight: 600;
+}
+
+#heartFilter{
+    width: 15%;
+}
+
+#squareFilter{
+    width: 15%;
+}
+
+#circleFilter{
+    width: 15%;
+}
+
+#rectFilter{
+    width: 15%;
+}
+
+
+.filtersAvail > button {
+    position: relative;
+    padding: 0.3rem;
+    border-radius: 8px;
+    border: 1px solid #c3c3c3;
+    background-color: white;
+    max-width: 80px;
+    cursor: pointer;
+}
+
+.filtersAvail button img{
+    width: 100%;
+    position: relative;
+    top: 50%;
+}
+
+#finalUpload{
+    padding: 1rem 2rem;
+    color: white;
+    background-color: rgb(38 126 120);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 75%;
+    max-width: 350px;
+    margin-block: 1rem;
+}

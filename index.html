@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu Gola | Celebare Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.css" integrity="sha512-C4k/QrN4udgZnXStNFS5osxdhVECWyhMsK1pnlk+LkC7yJGCqoYxW4mH3/ZXLweODyzolwdWSqmmadudSHMRLA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/59636c44d1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.js" integrity="sha512-LjPH94gotDTvKhoxqvR5xR2Nur8vO5RKelQmG52jlZo7SwI5WLYwDInPn1n8H9tR0zYqTqfNxWszUEy93cHHwg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <header class="app__header">
+            <div class="headerWrapper">
+                <button class="header__backBtn">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <h2>Add Image / Icon</h2>
+            </div>
+        </header>
+        <div class="imagePicker">
+            <span>Upload Image</span>
+            <button class="imagePicker__btn">Choose from Device</button>
+        </div>
+    </div>
+    <div class="modalWindow">
+        <header class="modalWindow__header">
+            <button class="modalWindow__backBtn">
+                <i class="fa-sharp fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="cropIcons">
+                <button>
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+                <button>
+                    <i class="fa-solid fa-circle-half-stroke"></i>
+                </button>
+                <button id="cropBtn">Crop</button>
+            </div>
+        </header>
+        <div class="container"></div>
+    </div>
+    <div class="modalWindowFinal">
+        <div class="modalWindowFinal_container">
+            <button id="crossBtn">
+                <i class="fa-sharp fa-solid fa-circle-xmark"></i>
+            </button>
+            <h2>Uploaded Image</h2>
+            <div class="imgPreview">
+                <img src="" alt="hello">
+            </div>
+            <div class="filtersAvail">
+                <button id="original">
+                    Original
+                </button>
+                <button id="heartFilter">
+                    <img src="filters/user_image_frame_1.png" alt="">
+                </button>
+                <button id="squareFilter">
+                    <img src="filters/user_image_frame_2.png" alt="">
+                </button>
+                <button id="circleFilter">
+                    <img src="filters/user_image_frame_3.png" alt="">
+                </button>
+                <button id="rectFilter">
+                    <img src="filters/user_image_frame_4.png" alt="">
+                </button>
+            </div>
+            <button id="finalUpload">Use this image</button>
+        </div>
+    </div>  
+</body>
+</html>
